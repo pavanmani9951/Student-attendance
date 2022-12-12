@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "type": "mssql.local",
+      "connectionId": "ConnectionStrings:EmployeeAttendanceSystemContext"
+    },
+    "secrets1": {
+      "type": "secrets.user"
+    },
+    "mssql2": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/attendance/databases/StudentAttendanceSystemContext",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:StudentAttendanceSystemContext",
+      "secretStore": "LocalSecretsFile"
+    },
+    "mssql3": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/attendance/databases/StudentAttendanceSystemContext",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:attendancecontext",
+      "secretStore": "LocalSecretsFile"
+    }
+  }
+}
